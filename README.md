@@ -1,61 +1,58 @@
 # QUANTAID  
-
 ![QUANTAID Hero](https://github.com/pioneerdevs/QuantAId/blob/main/preview.png?raw=true)
 
 **One-sentence pitch**  
-Upload your AI training data once → it gets scanned for risks, encrypted with math that survives quantum computers, and stamped forever on BlockDAG in under 2 seconds.
+Upload your AI training data once → scanned, quantum-encrypted in your browser, and permanently stamped on BlockDAG in <2 seconds.
 
 ---
 
-### The Problem Everyone Feels (But Doesn’t Say Out Loud)
+### The Quiet Crisis Every AI Founder Loses Sleep Over  
+Your model is only as strong as the data you trained it on.  
+That data is private, expensive, and the #1 target for tomorrow’s quantum attacks.  
 
-Your model is only as strong as your data.  
-That data is private, expensive, and the #1 thing attackers are coming for.
+Attackers are already stealing encrypted datasets today (“harvest now, decrypt later”).  
+When quantum computers arrive (~2030), today’s encryption becomes paper.  
+One breach → one lawsuit → one headline → your company is gone.  
+Clearview AI paid $50 M in 2025 for exactly this. Nobody wants to be next.
 
-- Quantum computers will break today’s encryption by ~2030  
-- Attackers are already stealing encrypted datasets today (“harvest now, decrypt later”)  
-- One breach or lawsuit can kill an AI company overnight (Clearview AI paid $50M in 2025 for mishandling training data)
+### QUANTAID Turns That Fear Into Your Biggest Competitive Advantage  
+Everything sensitive happens in the user’s browser (zero trust needed):  
+1. Drag & drop any dataset  
+2. Instant AI scan for PII, poisoning, bias  
+3. Client-side quantum-safe encryption (NIST Kyber-1024)  
+4. A tiny proof (just one hash) lands on BlockDAG forever  
+5. You walk away with a green checkmark + permanent explorer link  
 
-You can’t afford that headline.
+Your data is no longer a liability — it’s the most bulletproof asset you own.
 
-### QUANTAID Is the Shield You Need Today
+### Why BlockDAG Is the Perfect Home for This (And Why We Love It)  
+Most chains choke on real-world throughput or charge ridiculous gas.  
+BlockDAG does something no one else can:
 
-You keep full control. Everything important happens in your browser:
+- Parallel blocks → sub-second finality even in batches  
+- Already proven 10 K+ TPS on testnet with zero congestion  
+- Feels like a normal database, works like an immutable fortress  
 
-1. Drag & drop your dataset (any size, any format)  
-2. Built-in AI quickly scans for PII, poisoning, and bias risks  
-3. Your files are encrypted with NIST-approved post-quantum cryptography (Kyber-1024) — still in your browser  
-4. A tiny proof (just one hash) is stamped on BlockDAG forever in a few seconds  
-5. You get a green checkmark + a permanent explorer link
+That’s why we chose BlockDAG as the **only** chain we trust to be the eternal receipt for the world’s most valuable AI datasets.
 
+### The Flywheel That Grows the Entire BlockDAG Ecosystem  
+Every AI startup that adopts QUANTAID becomes a permanent BlockDAG user:
 
-Your data becomes the most secure asset in your company instead of the biggest liability.
+| Today → One startup | Tomorrow → BlockDAG gains |
+|---------------------|---------------------------|
+| 1 team uploads 50 GB | 1 live contract, 100+ daily proofs, real transaction volume |
+| 10 teams | 1,000+ daily proofs, dozens of nodes syncing their proofs |
+| 100 teams | Millions of on-chain proofs per month, petabytes referenced |
+| 1,000 teams | BlockDAG becomes the de-facto “source of truth” layer for AI data worldwide |
 
+We’re not just building a vault.  
+We’re bringing the entire next wave of AI companies — and their terabytes of daily activity — straight to BlockDAG.
 
-### Why BlockDAG Makes This Possible
+**Live on Primordial Testnet right now**  
+Verified contract: [`0x0478d7a0648Ae10a20BDcef5dd3086C636760Ab2`](https://explorer.blockdag.network/address/0x0478d7a0648Ae10a20BDcef5dd3086C636760Ab2)
 
-- Parallel blocks → sub-second finality for our tiny proofs  
-- Already showed 1K+ TPS on testnet  
-- Zero speculation, zero drama — perfect for rising AI firms
-
-### Live on Primordial Testnet Right Now
-
-- Smart Contract (verified): `0x0478d7a0648Ae10a20BDcef5dd3086C636760Ab2` 
-
-
-### Quick Start for Judges & Users
-
+### Quick Start (Takes 30 seconds)
 ```bash
-
-# Run locally
 git clone https://github.com/pioneerdevs/QuantAid
 cd QuantAid/frontend
 npm install && npm run dev
-```
-
-### Made with ❤️ for the BlockDAG Amazing Chain Race
-
-We’re a small team that cares deeply about keeping AI companies safe in the quantum future.
-
-**Your training data deserves to be unbreakable.**  
-That’s QUANTAID.
