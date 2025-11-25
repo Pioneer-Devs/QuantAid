@@ -14,13 +14,15 @@ export default function ProofExplorer() {
     functionName: 'proofs',
     args: queryId !== null ? [queryId] : undefined,
     enabled: queryId !== null,
-  });
+  } as any);
 
   function onLookup() {
     const n = Number(id);
     if (Number.isNaN(n) || n <= 0) return;
     setQueryId(n);
   }
+
+  const proofData = (proof as any)?.data;
 
   return (
     <div className="p-6">
@@ -30,11 +32,11 @@ export default function ProofExplorer() {
         <button className="px-3 py-2 bg-indigo-600 text-white rounded" onClick={onLookup}>Lookup</button>
       </div>
 
-      {proof?.data && (
+      {proofData && (
         <div className="mt-4 p-4 border rounded bg-white">
-          <p><strong>Hash:</strong> <code>{proof.data[0]}</code></p>
-          <p><strong>Timestamp:</strong> {new Date(Number(proof.data[1]) * 1000).toString()}</p>
-          <p><strong>Owner:</strong> {proof.data[2]}</p>
+          <p><strong>Hash:</strong> <code>{proofData[0]}</code></p>
+          <p><strong>Timestamp:</strong> {new Date(Number(proofData[1]) * 1000).toString()}</p>
+          <p><strong>Owner:</strong> {proofData[2]}</p>
         </div>
       )}
     </div>

@@ -13,11 +13,11 @@ export default function DashboardUpload() {
   const [proofId, setProofId] = useState<number | null>(null);
   const encryptedShardsRef = useRef<Uint8Array[]>([]);
 
-  const { write, writeAsync, data: txDataFromHook } = useContractWrite({
+  const writeHook = useContractWrite({
     address: contractAddress as any,
     abi: abi as any,
     functionName: 'secureDataset',
-  });
+  } as any);
 
   const publicClient = usePublicClient();
   const [txSuccess, setTxSuccess] = React.useState(false);
@@ -44,7 +44,11 @@ export default function DashboardUpload() {
 
       setStatus('Waiting for transaction confirmation');
       try {
-        await publicClient.waitForTransaction({ hash: txData.hash });
+        if (!publicClient) {
+          console.warn('No public client available to wait for tx');
+          return;
+        }
+        await (publicClient as any).waitForTransaction({ hash: txData.hash });
         if (cancelled) return;
         setTxSuccess(true);
       } catch (err) {
@@ -115,14 +119,15 @@ export default function DashboardUpload() {
       }
 
       // prefer writeAsync when available to get tx response immediately
-      if (typeof writeAsync === 'function') {
-        const tx = await writeAsync({ args: [datasetHash] });
+      const writeAny = writeHook as any;
+      if (typeof writeAny.writeAsync === 'function') {
+        const tx = await writeAny.writeAsync({ args: [datasetHash] });
         setTxData(tx);
         setStatus('Transaction broadcasted');
-      } else if (typeof write === 'function') {
-        write({ args: [datasetHash] });
-        // fallback: txDataFromHook might be populated by wagmi hook
-        setTxData(txDataFromHook ?? null);
+      } else if (typeof writeAny.write === 'function') {
+        writeAny.write({ args: [datasetHash] });
+        // fallback: txData from hook might be populated by wagmi hook
+        setTxData(writeAny.data ?? null);
       }
     } catch (err: any) {
       console.error('User rejected or tx error', err);

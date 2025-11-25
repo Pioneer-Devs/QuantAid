@@ -34,19 +34,19 @@ export async function encryptShard(shard: ArrayBuffer) {
   };
 }
 
-export function arrayBufferToHex(buf: ArrayBuffer | Uint8Array) {
+export function arrayBufferToHex(buf: ArrayBuffer | Uint8Array): `0x${string}` {
   const u8 = buf instanceof Uint8Array ? buf : new Uint8Array(buf);
-  return '0x' + Array.from(u8).map((b) => b.toString(16).padStart(2, '0')).join('');
+  return ('0x' + Array.from(u8).map((b) => b.toString(16).padStart(2, '0')).join('')) as `0x${string}`;
 }
 
 export function concatHex(hexes: string[]) {
   // remove 0x prefixes then concat
-  return '0x' + hexes.map((h) => h.replace(/^0x/, '')).join('');
+  return ('0x' + hexes.map((h) => h.replace(/^0x/, '')).join('')) as `0x${string}`;
 }
 
-export function computeKeccakOfHex(hex: string) {
-  // viem.keccak256 accepts a hex string
-  return keccak256(hex);
+export function computeKeccakOfHex(hex: `0x${string}`) {
+  // viem.keccak256 accepts a 0x-prefixed hex string
+  return keccak256(hex as `0x${string}`);
 }
 
 export async function computeDatasetHashFromEncryptedShards(encryptedShards: Array<Uint8Array>) {
