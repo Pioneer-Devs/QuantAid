@@ -43,7 +43,7 @@ Your data becomes the most secure asset in your company instead of the biggest l
 
 ### Live on Primordial Testnet Right Now
 
-- Smart Contract (verified): [`0xAbcd...1234`](https://explorer.blockdag.network/contract/0x...)  
+- Smart Contract (verified): `0x0478d7a0648Ae10a20BDcef5dd3086C636760Ab2` 
 - Frontend: https://quantaid.xyz  
 - Backend + AI scanner is being setup  
 
@@ -51,10 +51,8 @@ Your data becomes the most secure asset in your company instead of the biggest l
 ### Quick Start for Judges & Users
 
 ```bash
-# Just open the site
-https://quantaid.xyz
 
-# Or run locally
+# Run locally
 git clone https://github.com/pioneerdevs/QuantAid
 cd QuantAid/frontend
 npm install && npm run dev
