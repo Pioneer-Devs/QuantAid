@@ -10,7 +10,7 @@
     "vercel-build": "next build",
     "now-build": "next build",
     "build:deploy": "next build",
-    "deploy": "npm run build:deploy"
+    "deploy": "npm run build:deploy" 
   },
   "dependencies": {
     "@reown/appkit": "^1.2.1",
