@@ -1,5 +1,6 @@
-import { abi } from "./abi";
+import QuantaidProofArtifact from "../abis/QuantaidProof.json";
 
-const contractAddress = "your contract address";
+export const abi = QuantaidProofArtifact.abi;
+export const contractAddress = "0x0478d7a0648Ae10a20BDcef5dd3086C636760Ab2";
 
-export { abi, contractAddress };
+export { QuantaidProofArtifact };
