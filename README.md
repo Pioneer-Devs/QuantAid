@@ -30,7 +30,7 @@ Most chains choke on real-world throughput or charge ridiculous gas.
 BlockDAG does something no one else can:
 
 - Parallel blocks → sub-second finality even in batches  
-- Already proven 10 K+ TPS on testnet with zero congestion  
+- Already proven 1K+ TPS on testnet with zero congestion  
 - Feels like a normal database, works like an immutable fortress  
 
 That’s why we chose BlockDAG as the **only** chain we trust to be the eternal receipt for the world’s most valuable AI datasets.
