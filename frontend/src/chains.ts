@@ -2,7 +2,7 @@ import { Chain } from 'viem';
 
 export const blockdagPrimordial = {
   id: 1043,
-  name: 'BlockDAG Primordial',
+  name: 'BlockDAG Awakening Testnet',
   nativeCurrency: {
     decimals: 18,
     name: 'BlockDAG',
@@ -10,16 +10,16 @@ export const blockdagPrimordial = {
   },
   rpcUrls: {
     default: {
-      http: ['https://rpc.primordial.bdagscan.com'],
+      http: ['https://rpc.awakening.bdagscan.com'],
     },
     public: {
-      http: ['https://rpc.primordial.bdagscan.com'],
+      http: ['https://rpc.awakening.bdagscan.com'],
     },
   },
   blockExplorers: {
     default: {
-      name: 'BDAGScan',
-      url: 'https://primordial.bdagscan.com',
+      name: 'BDAGScan Awakening',
+      url: 'https://awakening.bdagscan.com',
     },
   },
 } as const satisfies Chain; 
