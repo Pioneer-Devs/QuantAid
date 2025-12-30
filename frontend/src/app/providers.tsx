@@ -15,7 +15,8 @@ const metadata = {
   icons: ['https://avatars.githubusercontent.com/u/37784886']
 };
 
-const networks = [blockdagPrimordial] as const;
+// Use a mutable array so it matches the expected AppKitNetwork[] type
+const networks = [blockdagPrimordial];
 
 const wagmiAdapter = new WagmiAdapter({
   networks,

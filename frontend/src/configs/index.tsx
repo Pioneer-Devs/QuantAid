@@ -11,13 +11,13 @@ if (!projectId) throw new Error("Project ID is not defined");
 
 const metadata = {
   name: "QuantAId",
-  description: "QuantAId Example",
-  url: "https://quantaid.com", // origin must match your domain & subdomain
+  description: "QuantAId",
+  url: "https://quantaid.vercel.app", // origin must match your domain & subdomain
   icons: ["https://avatars.githubusercontent.com/u/37784886"],
 };
 
 // Create wagmiAdapter
-const networks = [morphHolesky] as const;
+const networks = [morphHolesky];
 
 export const wagmiAdapter = new WagmiAdapter({
   networks,
