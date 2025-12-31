@@ -1830,7 +1830,7 @@
   dependencies:
     tslib "1.14.1"
 
-"@walletconnect/ethereum-provider@~2.21.1":
+"@walletconnect/ethereum-provider@^2.21.10", "@walletconnect/ethereum-provider@~2.21.1":
   version "2.21.10"
   resolved "https://registry.npmjs.org/@walletconnect/ethereum-provider/-/ethereum-provider-2.21.10.tgz"
   integrity sha512-QhsZmrMKReR7YW6QB8O3c0YTQgeK/U8I+/nbbp6W37HVx2OcWMfdcGuXd06fgtP3YzEnVr0l6T9CAtAPKSU4cg==

@@ -1,32 +1,82 @@
 "use client";
 
 import React from "react";
-import QuantumLattice from "@/components/QuantumLattice";
-import ConnectButton from "@/components/ConnectButton";
+import Image from "next/image";
+import { useAccount } from "wagmi";
+import { useRouter } from "next/navigation";
+import { useAppKit } from "@reown/appkit/react";
 
 export default function Hero() {
+  const { isConnected } = useAccount();
+  const router = useRouter();
+  const { open } = useAppKit();
+
+  const handleCTA = () => {
+    if (isConnected) {
+      router.push("/dashboard");
+    } else {
+      open();
+    }
+  };
 
   return (
-    <section className="relative min-h-[85vh] flex items-center justify-center text-center overflow-hidden">
-      <QuantumLattice />
+    <section className="relative bg-white py-10 lg:py-10 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          
+          {/* Left Column - Text Content */}
+          <div className="text-left space-y-8">
+            <div className="space-y-4">
+              <p className="text-sm text-blue-600 font-semibold tracking-wide uppercase">
+                AI DATASET SECURITY
+              </p>
+              
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight">
+                QUANTAID
+              </h1>
 
-      <div className="mx-auto w-full max-w-5xl px-6">
-        <div className="mb-6">
-          <p className="text-sm text-cyan-400/60 tracking-wide">AI risk scan • Kyber-1024 encryption • Immutable proof</p>
-        </div>
+              <p className="text-xl sm:text-2xl text-gray-700 leading-relaxed">
+                Encrypt AI datasets with <span className="text-blue-600 font-semibold">PQC resistant encryption</span> in your browser and anchor immutable proofs on <span className="text-blue-600 font-semibold">BlockDAG</span> in seconds.
+              </p>
+            </div>
 
-        <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold text-white leading-tight drop-shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
-          Your AI training data. <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#8b5cf6] to-[#a78bff]">Quantum-proof forever.</span>
-        </h1>
+            <p className="text-base text-gray-600 leading-relaxed max-w-xl">
+              Essential decentralized infrastructure for securing AI training data. Powered by post-quantum cryptography, protecting datasets worth billions in value monthly.
+            </p>
 
-        <p className="mt-6 text-gray-300 max-w-2xl mx-auto text-lg sm:text-xl">
-          AI risk scan • Kyber-1024 encryption in your browser • Immutable proof on BlockDAG in &lt;2 seconds.
-        </p>
+            <div className="flex flex-col sm:flex-row items-start gap-4 pt-4">
+              <button 
+                onClick={handleCTA}
+                className="group px-8 py-4 text-lg font-semibold rounded-xl bg-blue-600 hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 text-white"
+              >
+                {isConnected ? "Go to Dashboard" : "Start building"}
+              </button>
+              
+              <a 
+                href="https://github.com/freddyfavour/QuantAid" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="px-8 py-4 text-lg font-semibold rounded-xl border-2 border-gray-300 text-gray-900 hover:border-blue-600 hover:text-blue-600 transition-all duration-300 inline-block text-center"
+              >
+                Docs
+              </a>
+            </div>
 
-        <div className="mt-10 flex flex-col sm:flex-row items-center gap-4 justify-center">
-          <ConnectButton className="px-8 py-4 text-lg sm:text-xl font-semibold shadow-[0_8px_40px_rgba(139,92,246,0.16)] rounded-xl bg-gradient-to-r from-[#8b5cf6] to-[#a78bff] hover:scale-[1.02] transition-transform" />
+            <p className="text-sm text-gray-500">
+              Free to try. Works entirely in your browser.
+            </p>
+          </div>
 
-          <button className="px-6 py-3 rounded-lg border border-[rgba(167,139,255,0.12)] text-white text-sm hover:bg-[rgba(255,255,255,0.02)] transition">Watch 45-sec Demo</button>
+          {/* Right Column - Image */}
+          <div className="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl">
+            <Image
+              src="/quantum.jpg"
+              alt="Quantum Security"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
         </div>
       </div>
     </section>
