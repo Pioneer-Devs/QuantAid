@@ -17,13 +17,13 @@ export default function Navbar() {
   return (
     <header
       className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-        scrolled ? "backdrop-blur-md bg-white/4 border-b border-white/6" : "bg-transparent"
+        scrolled ? "backdrop-blur-md bg-white/90 border-b border-gray-200 shadow-sm" : "bg-white"
       }`}
     >
       <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-6">
           <Link href="/" className="flex items-center gap-3">
-            <span className="font-semibold text-lg tracking-wide bg-clip-text text-transparent bg-gradient-to-r from-[#8b5cf6] to-[#a78bff] drop-shadow-[0_6px_18px_rgba(139,92,246,0.14)]">
+            <span className="font-bold text-2xl tracking-tight text-gray-900">
               QUANTAID
             </span>
           </Link>
