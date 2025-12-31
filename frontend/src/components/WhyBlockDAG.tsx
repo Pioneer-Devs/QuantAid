@@ -69,7 +69,7 @@ export default function WhyBlockDAG() {
               <div className="inline-block px-6 py-3 rounded-full bg-blue-600 text-white font-bold text-xl mb-4">
                 BlockDAG
               </div>
-              <div className="text-5xl font-extrabold text-gray-900 mb-3">15K+ TPS</div>
+              <div className="text-5xl font-extrabold text-gray-900 mb-3">1K+ TPS</div>
               <p className="text-gray-700 text-lg">High throughput and low cost make BlockDAG ideal for publishing proofs at scale</p>
             </div>
 
