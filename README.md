@@ -1,5 +1,5 @@
 # QUANTAID  
-![QUANTAID Hero](https://github.com/pioneerdevs/QuantAId/blob/main/preview.png?raw=true)
+![QUANTAID Hero](https://github.com/freddyfavour/QuantAid/blob/main/image.png?raw=true)
 
 **One-sentence pitch**  
 A simple way to scan your AI data, encrypt it with post-quantum security, and anchor a proof on BlockDAG in a few seconds.
